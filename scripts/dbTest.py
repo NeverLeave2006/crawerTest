@@ -4,14 +4,13 @@
 import MySQLdb
 
 # 打开数据库连接
-db = MySQLdb.connect("192.168.1.104", "root", "4004123a", "crawler", charset='utf8' )
+db = MySQLdb.connect("192.168.0.105", "root", "4004123a", "web_data", charset='utf8' )
 
 # 使用cursor()方法获取操作游标 
 cursor = db.cursor()
 
 # SQL 插入语句
-sql = """INSERT INTO zw_tb
-         VALUES ('1', 'name', '123')"""
+sql = """insert into pic_titles(title, class, url) VALUES('1','1','1')"""
 try:
    # 执行sql语句
    cursor.execute(sql)
